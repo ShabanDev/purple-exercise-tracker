@@ -1,0 +1,46 @@
+{
+  "name": "purple-exercise-tracker",
+  "version": "1.0.0",
+  "description": "A purple exercise tracker created for the purpose of practicing react and express web development.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode development",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuyNumber9/purple-exercise-tracker.git"
+  },
+  "keywords": [
+    "express",
+    "react"
+  ],
+  "author": "Saud Shaban",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GuyNumber9/purple-exercise-tracker/issues"
+  },
+  "homepage": "https://github.com/GuyNumber9/purple-exercise-tracker#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lokijs": "^1.5.8",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less-loader": "^5.0.0",
+    "prop-types": "^15.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
