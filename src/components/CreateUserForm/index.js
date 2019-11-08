@@ -5,9 +5,9 @@ import FormList from '../FormList';
 
 class CreateUserForm extends React.PureComponent {
     render(){
-        return <StyledForm method="POST" action="/api/exercise/new-user">
+        return <form method="POST" action="/api/exercise/new-user">
             <h3>Create a New User</h3>
-            <code>POST /api/exercise/new-user</code>
+            <pre><code>POST /api/exercise/new-user</code></pre>
             <FormList>
                 <li>
                     <input type="text" name="username" placeholder="username" />
@@ -16,7 +16,7 @@ class CreateUserForm extends React.PureComponent {
                     <input type="submit" value="Submit" />
                 </li>
             </FormList>
-        </StyledForm>
+        </form>
     }
 }
 

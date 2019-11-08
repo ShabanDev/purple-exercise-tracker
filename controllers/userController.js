@@ -28,7 +28,11 @@ function createUser(req, res){
     }
 }
 
+function getUsers(req, res){
+    res.json(db.users.find());
+}
 
 module.exports = {
-    createUser
+    createUser,
+    getUsers
 };

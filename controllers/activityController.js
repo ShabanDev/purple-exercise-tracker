@@ -1,7 +1,6 @@
 const db = require('../database');
 
 function addActivity(req, res){
-
     let user = db.users.findOne({
         _id: req.body.userId
     });
@@ -44,10 +43,13 @@ function getActivities(req, res){
     if(req.query.to){
         query.date.$lte = Date.parse(req.query.to);
     }
+
     if(req.query.limit){
-        query.$limit = parseInt(req.query.limit);
+        res.json(db.activities.chain().find(query).limit(parseInt(req.query.limit)).data())
     }
-    res.json(db.activities.find(query));
+    else {
+        res.json(db.activities.find(query));
+    }
 }
 
 module.exports = {

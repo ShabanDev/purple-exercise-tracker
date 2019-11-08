@@ -1,6 +1,10 @@
 const loki = require('lokijs');
 
-const db = new loki('db.json');
+const db = new loki('db.json', {
+    autoload: true,
+    autosave: true,
+    autosaveInterval: 4000
+});
 
 let collections = {};
 collections.users = db.getCollection('users');
