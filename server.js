@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
+const userRoutes = require('./routes/userRoutes');
+
 let app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({
@@ -9,6 +11,8 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(express.static('./public'));
+
+app.use('/api/exercise', userRoutes);
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
